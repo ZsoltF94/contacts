@@ -10,7 +10,7 @@ It allows users to manage contacts with the following fields:
 
 ## Screenshot
 
-![contacts_app_screenshot](Screenshots/screenshot_contacts_app.png)
+![contacts_app_screenshot](Kontaktbuch/Screenshots/screenshot_contacts_app.png)
 
 ## Purpose
 
