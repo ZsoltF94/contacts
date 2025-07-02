@@ -8,6 +8,10 @@ It allows users to manage contacts with the following fields:
 - Phone number
 - Email
 
+## Screenshot
+
+![contacts_app_screenshot](Screenshots/screenshot_contacts_app.png)
+
 ## Purpose
 
 The purpose of this project was to learn how to:
