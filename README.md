@@ -1,35 +1,50 @@
 # Contact Book
 
-This is a simple Windows Forms application written in C#.  
-It allows you to manage contacts with the following fields:
+This is a Windows Forms application written in C#.  
+It allows users to manage contacts with the following fields:
 
 - First name
 - Last name
 - Phone number
-- E-mail address
+- Email
+
+## Purpose
+
+The purpose of this project was to learn how to:
+
+- Build a graphical user interface using WinForms
+- Structure a C# project with reusable classes
+- Connect to a PostgreSQL database from C#
+- Store and retrieve real data using SQL
+- Deploy a functional app with persistent storage
+
+This project served as a practical exercise in integrating database operations into a real-world application.
 
 ## Features
 
-- Custom window layout (rounded corners, no default border)
-- Add and delete contacts in a list
-- Save button creates a contact object from user input
-- Displayed contacts are stored in memory
-- Prepared for database integration (PostgreSQL planned)
+- Custom layout with rounded window corners and no system border
+- Add, search and delete contacts via graphical interface
+- PostgreSQL database integration for persistent storage
+- Load all contacts on application startup
+- Clean separation of UI and data access
 
 ## Technologies
 
-- .NET WinForms
+- .NET WinForms (.NET 6+)
 - C#
-- Visual Studio 2022
-
-## Planned
-
-- PostgreSQL integration for persistent storage
-- Contact editing feature
-- File export/import
+- PostgreSQL
+- Npgsql (ADO.NET provider for PostgreSQL)
 
 ## Getting Started
 
-1. Clone the repository
-2. Open the solution file in Visual Studio
-3. Run the project
+1. Install PostgreSQL and create a database named `kontaktbuch`
+2. Execute the following SQL statement to create the table:
+
+```sql
+CREATE TABLE kontakte (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    lastname TEXT,
+    phone TEXT,
+    email TEXT
+);
