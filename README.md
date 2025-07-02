@@ -7,7 +7,6 @@ It allows you to manage contacts with the following fields:
 - Last name
 - Phone number
 - E-mail address
-- Notes (internal)
 
 ## Features
 

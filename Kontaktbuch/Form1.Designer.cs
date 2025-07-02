@@ -40,12 +40,15 @@
             textBox4 = new TextBox();
             deleteBtn = new Button();
             label5 = new Label();
+            searchBtn = new Button();
+            textBox5 = new TextBox();
+            closeBtn = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(34, 61);
+            label1.Location = new Point(26, 83);
             label1.Name = "label1";
             label1.Size = new Size(37, 15);
             label1.TabIndex = 0;
@@ -55,17 +58,17 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(259, 61);
+            listBox1.Location = new Point(251, 83);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(173, 109);
-            listBox1.TabIndex = 7;
+            listBox1.Size = new Size(322, 109);
+            listBox1.TabIndex = 8;
             // 
             // saveBtn
             // 
-            saveBtn.Location = new Point(96, 194);
+            saveBtn.Location = new Point(88, 216);
             saveBtn.Name = "saveBtn";
             saveBtn.Size = new Size(100, 23);
-            saveBtn.TabIndex = 9;
+            saveBtn.TabIndex = 5;
             saveBtn.Text = "save";
             saveBtn.UseVisualStyleBackColor = true;
             saveBtn.Click += button1_Click;
@@ -73,7 +76,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(34, 90);
+            label2.Location = new Point(26, 112);
             label2.Name = "label2";
             label2.Size = new Size(58, 15);
             label2.TabIndex = 10;
@@ -82,7 +85,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(34, 119);
+            label3.Location = new Point(26, 141);
             label3.Name = "label3";
             label3.Size = new Size(41, 15);
             label3.TabIndex = 11;
@@ -91,7 +94,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(34, 148);
+            label4.Location = new Point(26, 170);
             label4.Name = "label4";
             label4.Size = new Size(41, 15);
             label4.TabIndex = 12;
@@ -99,36 +102,36 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(96, 58);
+            textBox1.Location = new Point(88, 80);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 13;
+            textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(96, 87);
+            textBox2.Location = new Point(88, 109);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 13;
+            textBox2.TabIndex = 2;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(96, 116);
+            textBox3.Location = new Point(88, 138);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 13;
+            textBox3.TabIndex = 3;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(96, 145);
+            textBox4.Location = new Point(88, 167);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 13;
+            textBox4.TabIndex = 4;
             // 
             // deleteBtn
             // 
             deleteBtn.Font = new Font("Segoe UI", 9F);
-            deleteBtn.Location = new Point(290, 194);
+            deleteBtn.Location = new Point(251, 216);
             deleteBtn.Name = "deleteBtn";
             deleteBtn.Size = new Size(100, 23);
             deleteBtn.TabIndex = 9;
@@ -148,12 +151,46 @@
             label5.TextAlign = ContentAlignment.TopCenter;
             label5.Click += label5_Click;
             // 
+            // searchBtn
+            // 
+            searchBtn.Location = new Point(498, 39);
+            searchBtn.Name = "searchBtn";
+            searchBtn.Size = new Size(75, 23);
+            searchBtn.TabIndex = 7;
+            searchBtn.Text = "search";
+            searchBtn.UseVisualStyleBackColor = true;
+            searchBtn.Click += searchBtn_Click;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(251, 40);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(241, 23);
+            textBox5.TabIndex = 6;
+            // 
+            // closeBtn
+            // 
+            closeBtn.BackColor = Color.Tomato;
+            closeBtn.FlatStyle = FlatStyle.System;
+            closeBtn.ForeColor = SystemColors.ButtonHighlight;
+            closeBtn.Location = new Point(538, 9);
+            closeBtn.Name = "closeBtn";
+            closeBtn.Size = new Size(35, 23);
+            closeBtn.TabIndex = 15;
+            closeBtn.TabStop = false;
+            closeBtn.Text = "X";
+            closeBtn.UseVisualStyleBackColor = false;
+            closeBtn.Click += CloseApp;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
-            ClientSize = new Size(483, 251);
+            ClientSize = new Size(593, 251);
+            Controls.Add(closeBtn);
+            Controls.Add(textBox5);
+            Controls.Add(searchBtn);
             Controls.Add(label5);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
@@ -169,6 +206,7 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            MouseDown += Form1_MouseDown;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -187,5 +225,8 @@
         private TextBox textBox4;
         private Button deleteBtn;
         private Label label5;
+        private Button searchBtn;
+        private TextBox textBox5;
+        private Button closeBtn;
     }
 }
